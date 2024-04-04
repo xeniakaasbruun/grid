@@ -1,0 +1,73 @@
+.item0 {
+  grid-area: header;
+}
+.item1 {
+  grid-area: billede1;
+}
+.item2 { grid-area: billede2; }
+.item3 {
+  grid-area: billede3;
+
+}
+.item4 {
+  grid-area: billede4;
+}
+.item5 {
+  grid-area: billede5;
+}
+.item6 {
+  grid-area: billede6;
+}
+.item7 {
+  grid-area: billede7;
+}
+.item8 {
+  grid-area: footer;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'billede1 billede1 billede1 billede1 billede1 billede1'
+    'billede2 billede2 billede2 billede3 billede3 billede3'
+    'billede4 billede4 billede4 billede5 billede5 billede5'
+    'billede6 billede6 billede6 billede7 billede7 billede7'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 15px;
+  border: 1px solid black;
+
+}
+
+.card-text{
+  text-align: left;
+  padding: 5px;
+}
+
+.card-img-top, .card-img-top1{
+  width: 100%;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "billede1"
+      "billede2"
+      "billede3"
+      "billede4"
+      "billede5"
+      "billede6"
+      "billede7"
+      "footer";
+  }
